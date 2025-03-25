@@ -4,6 +4,7 @@
 $primary-color: #f6a10c;
 $secondary-color: #000;
 $text-color: #fff;
+$extra-color:#362e20;
 
 *{
   padding:0;
@@ -14,20 +15,23 @@ $text-color: #fff;
 
 body {
   background: linear-gradient(90deg, rgba(225,225,227,1) 0%, rgba(255,255,255,1) 56%, rgba(225,225,227,1) 100%);
+  align-items: center;
+  justify-content: center;
   
   h1{
     font-size: 2rem;
   }
 
   h2{
-    font-size:4rem; 
+    font-size:3.5rem; 
     color:$primary-color;
    }
 
-   h3{
-    font-size: 1.5rem; 
+  h3{
+    font-size: 1.8rem; 
+    color:$primary-color;
    }
-
+   
   p{
     font-size: 1rem;
     line-height: 2rem;
@@ -35,72 +39,347 @@ body {
    
 }
 
+// Part-1
 .navbar {
-  max-width: 100%;
-  background-image: url(image/backblack.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
-  padding: 20px 100px;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #000 30%, #222);
+  color: $text-color;
 
-  .logo{
-    font-size: 1.8rem;
-    font-weight: bold;
-    color:$primary-color;
+  .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $primary-color;
   }
 
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 70px;
+      list-style: none;
+      display: flex;
 
-    a {
-      text-decoration: none;
-      color: $text-color;
-      &:hover {
-        color: $primary-color;
+      li {
+          margin: 0 15px;
+
+          a {
+              text-decoration: none;
+              color: $text-color;
+              font-size: 1rem;
+              transition: color 0.3s;
+
+              &:hover {
+                  color: $primary-color;
+              }
+          }
       }
-    }
+  }
+
+  .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+
+      .bar {
+          width: 25px;
+          height: 3px;
+          background: $text-color;
+          margin: 4px 0;
+          transition: 0.4s;
+      }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: $bg-color;
+      text-align: center;
+
+      li {
+          margin: 15px 0;
+      }
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .nav-links.active {
+      display: flex;
   }
 }
 
 
 
 
+
+// Part-2
 .hero {
   max-width: 100%;
-  margin: 10px;
+  align-items: center;
   text-align: center;
-
-  h1{
-    margin: 50px -10px 0 0;
-  }
+  padding:50px 10px;
+  
   p{
-    margin-bottom: 30px;
+    margin: 20px 0 40px 0;
   }
 
   @media (min-width: 992px) {
     max-width:45%;
-    margin: auto;
+    margin: auto; 
+  }
 
-
+  .btn {
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold; 
+    &:hover {
+    opacity: 0.29;
+    transition: opacity 1s ease 0s;
+    }
   }
 }
 
-.btn {
+// Part-3
+.personal-info1 {
+  max-width: 100%;
+  display: flex;
+  background-color: black;
+  color: white;
+  gap:90px;
+  padding:50px 150px;
+
+  .image {
+    max-width: 500px;
+  }
+  h3{
+    margin: 20px 0;
+  }
+  .info {
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows:120px;
+    gap:5px;
+    text-align: left;
+   
+  }
+  .label1:nth-child(1){
+    background-color: $extra-color;
+    max-width: 230px;
+    height:80px;
+    border-radius: 5px;
+    padding:10px;
+    align-items: center;
+    &:hover {
+      opacity: 0.29;
+      transition: opacity 1s ease 0s;
+      }
+  }
+  
+  .label2:nth-child(2){
+    background-color: $extra-color;
+    max-width: 230px;
+    height:80px;
+    border-radius: 5px;
+    padding:10px;
+    align-items: center;
+    &:hover {
+      opacity: 0.29;
+      transition: opacity 1s ease 0s;
+      }
+  }
+  
+  .label3:nth-child(3){
+    background-color: $extra-color;
+    max-width: 230px;
+    height:80px;
+    border-radius: 5px;
+    padding:10px;
+    align-items: center;
+    &:hover {
+      opacity: 0.29;
+      transition: opacity 1s ease 0s;
+      }
+  }
+  
+  .label4:nth-child(4){
+    background-color: $extra-color;
+    max-width: 230px;
+    height:80px;
+    border-radius: 5px;
+    padding:10px;
+    align-items: center;
+    &:hover {
+      opacity: 0.29;
+      transition: opacity 1s ease 0s;
+      }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 2px;
+  }
+  .social-icons img {
+    width: 40px;
+  }
+}
+
+
+// Part-4
+.personal-info2 {
   background-color: $primary-color;
-  color: $text-color;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  &:hover {
-  opacity: 0.29;
-  transition: opacity 1s ease 0s;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding:50px 150px;
+  
+  h3{
+    color:$secondary-color;
+  }
+.education{
+ 
+  .fact{
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows:80px;
+}
+
+}
+
+}
+
+.qualifications{
+
+  .qual-item{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+  }
+
+  .qual-item1{
+    font-weight: bold;
+  }
+ 
+}
+
+// Part-5
+.key-skills {
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding:50px 150px;
+
+  p{
+    color:$text-color;
   }
 }
+
+.skills-section {
+  width: 40%;
+}
+
+.skill-group{
+  margin-top:30px;
+}
+
+.skill {
+  margin: 10px 0;
+}
+
+.progress {
+  background-color: $text-color;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 10px;
+}
+.progress-bar {
+  background-color: orange;
+  height: 100%;
+}
+.image-section img {
+  max-width: 500px;
+}
+  
+// Part-6
+.experience {
+  max-width: 100%;
+  text-align: center;
+  padding:50px 150px;
+
+  h3{
+    color:$secondary-color;
+  }
+
+  .experience-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+  }
+
+  .experience-column {
+      max-width: 100%;
+  }
+
+  .experience-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      .dot {
+          width: 30px;
+          height: 30px;
+          background-color: #f4a71d;
+          border-radius: 50%;
+          margin-right: 20px;
+      }
+
+      .details {
+          text-align: left;
+
+          h3 {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 0;
+
+              span {
+                  font-style: italic;
+                  font-weight: bold;
+                  color: gray;
+              }
+          }
+
+          p {
+              margin: 5px 0 0;
+              color: gray;
+          }
+      }
+  }
+}
+ 
+   
+
+
+
+
+
+
+
+
+
 
 
 
