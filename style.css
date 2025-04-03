@@ -386,10 +386,16 @@ body p {
 }
 
 .portfolio {
+  padding: 50px 15px;
   background-color: #000;
-  max-width: 100%;
-  text-align: center;
-  padding: 50px 150px;
+}
+@media (min-width: 992px) {
+  .portfolio {
+    background-color: #000;
+    max-width: 100%;
+    text-align: center;
+    padding: 50px 150px;
+  }
 }
 .portfolio h3 {
   color: #f6a10c;
@@ -398,10 +404,20 @@ body p {
 .portfolio .portfolio-container {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3);
   gap: 20px;
   padding: 20px;
   justify-content: center;
+}
+@media (min-width: 992px) {
+  .portfolio .portfolio-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
 }
 .portfolio .item {
   background: #fff;
@@ -418,19 +434,28 @@ body p {
   background-image: url(image/backblack.png);
   background-size: cover;
   color: #fff;
-  padding: 30px 50px;
+  padding: 50px 15px;
   text-align: center;
 }
+@media (min-width: 996px) {
+  .footer {
+    background-image: url(image/backblack.png);
+    background-size: cover;
+    color: #fff;
+    padding: 30px 50px;
+    text-align: center;
+  }
+}
 .footer .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .footer .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 @media (min-width: 996px) {
   .footer .footer-content {
@@ -439,10 +464,20 @@ body p {
     row-gap: 80px;
   }
 }
+.footer .logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer .logo-bar {
+  width: 60px;
+  height: 15px;
+  background-color: #f5a623;
+}
 .footer .footer-nav ul {
   list-style: none;
-  display: flex;
-  gap: 10px;
+  display: column;
+  line-height: 40px;
 }
 @media (min-width: 996px) {
   .footer .footer-nav ul {
@@ -459,18 +494,16 @@ body p {
 .footer a:hover {
   color: #f39c12;
 }
-
-.footer-social a {
+.footer .footer-social a {
   color: #fff;
   font-size: 20px;
   margin: 0 10px;
   transition: color 0.3s;
 }
-.footer-social a:hover {
+.footer .footer-social a:hover {
   color: #f39c12;
 }
-
-.footer-bottom {
+.footer .footer-bottom {
   margin-top: 50px;
   font-size: 14px;
   opacity: 0.7;
