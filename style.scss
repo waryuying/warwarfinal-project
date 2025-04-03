@@ -363,12 +363,6 @@ body {
   }
 }
 
-
-
-
-
-
-
 // Part-6
 .experience {
     padding:50px 15px;
@@ -452,32 +446,40 @@ body {
   max-width: 100%;
   text-align: center;
   padding:50px 150px;
+
+  h3{
+    color:$primary-color;
+    text-align: center;
+  }
+  
+  .portfolio-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .item {
+    background:$text-color;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(42, 34, 34);
+  }
+  
+  .item img {
+    width: 100%;
+    border-radius: 10px;
+  }
 }
 
-h3{
-  color:$primary-color;
-  text-align: center;
-}
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
 
-.item {
-  background:$text-color;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgb(42, 34, 34);
-}
 
-.item img {
-  width: 100%;
-  border-radius: 15px;
-}
+
+
+
 
 
 // Part-8

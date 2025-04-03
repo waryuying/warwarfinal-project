@@ -391,30 +391,27 @@ body p {
   text-align: center;
   padding: 50px 150px;
 }
-
-h3 {
+.portfolio h3 {
   color: #f6a10c;
   text-align: center;
 }
-
-.grid {
+.portfolio .portfolio-container {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
   justify-content: center;
 }
-
-.item {
+.portfolio .item {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(42, 34, 34);
 }
-
-.item img {
+.portfolio .item img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .footer {
